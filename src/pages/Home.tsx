@@ -2,32 +2,35 @@ import { Download, Shield, Zap, Users, Clock } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const titles = [
+    "3 Patti Dragon Tiger Club",
+    "3 Patti Flying Chess",
+    "3 Patti No. 1",
+    "3 Patti Blue",
+    "3 Patti Gold",
+    "3 Patti Crown",
+    "3 Patti Boss",
+    "3 Patti Lucky",
+    "3 Patti Master"
+  ];
+
   return (
     <div className="min-h-screen">
       {/* ✅ Download Buttons Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center gap-4">
-          {[
-          "3 Patti Dragon Tiger Club",
-"3 Patti Flying Chess",
-"3 Patti No. 1",
-"3 Patti Blue",
-"3 Patti Gold",
-"3 Patti Crown",
-"3 Patti Boss",
-"3 Patti Lucky",
-"3 Patti Master"
-
-          ].map((title, index) => (
+          {titles.map((title, index) => (
             <a
               key={index}
               href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center space-x-2 mx-auto">
-                <Download className="h-5 w-5" />
-                <span>{title}</span>
+              <button
+                className="w-80 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center justify-center space-x-2 mx-auto"
+              >
+                <Download className="h-5 w-5 flex-shrink-0" />
+                <span className="truncate">{title}</span>
               </button>
             </a>
           ))}
@@ -46,9 +49,7 @@ export default function Home() {
               <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                 <Clock className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                AI Legal Assistance 24/7
-              </h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">AI Legal Assistance 24/7</h3>
               <p className="text-gray-600">
                 Get quick legal info powered by AI anytime, anywhere.
               </p>
@@ -58,9 +59,7 @@ export default function Home() {
               <div className="bg-green-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Privacy Protected
-              </h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Privacy Protected</h3>
               <p className="text-gray-600">
                 Your conversations are encrypted and secure.
               </p>
@@ -70,9 +69,7 @@ export default function Home() {
               <div className="bg-orange-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                 <Zap className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Fast & Accurate
-              </h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Fast & Accurate</h3>
               <p className="text-gray-600">
                 Instant answers to legal queries with precision.
               </p>
@@ -82,9 +79,7 @@ export default function Home() {
               <div className="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                 <Users className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                User Friendly
-              </h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">User Friendly</h3>
               <p className="text-gray-600">
                 Easy for anyone to use, no legal expertise required.
               </p>
@@ -142,3 +137,4 @@ export default function Home() {
     </div>
   );
 }
+

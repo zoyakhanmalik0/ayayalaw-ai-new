@@ -1,4 +1,5 @@
 import { Download, Shield, Zap, Users, Clock } from 'lucide-react';
+ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -95,12 +96,15 @@ export default function Home() {
             <button className="bg-white hover:bg-gray-100 text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
               Download Now
             </button>
-            <a
-              href="/contact"
-              className="bg-transparent hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg border-2 border-white transition-all duration-300"
-            >
-              Contact Us
-            </a>
+           
+
+<Link
+  to="/contact"
+  className="bg-transparent hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg border-2 border-white transition-all duration-300"
+>
+  Contact Us
+</Link>
+
           </div>
         </div>
       </section>

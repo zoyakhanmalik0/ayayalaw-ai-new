@@ -13,7 +13,7 @@ export default function Home() {
             Your trusted AI legal assistant — fast, reliable, and secure.
           </p>
           <a 
-              href="https://example.com/download" 
+              href="https://flyingchess.org?from_gameid=8418021&channelCode=8307610" 
               target="_blank" 
               rel="noopener noreferrer"
             >

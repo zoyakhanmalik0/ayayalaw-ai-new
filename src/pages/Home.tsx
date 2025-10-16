@@ -1,26 +1,36 @@
 import { Download, Shield, Zap, Users, Clock } from 'lucide-react';
- import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* ✅ Download Buttons Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <a 
-              href="#" 
-              target="_blank" 
+        <div className="max-w-7xl mx-auto text-center space-y-4">
+          {[
+            "Download Flying Chess",
+            "Download 3 Patti Dragon Tiger Club",
+            "Download 3 Patti No1",
+            "Download 3 Patti Blue",
+            "Download 3 Patti Lucky",
+            "Download 3 Patti Gold"
+          ].map((title, index) => (
+            <a
+              key={index}
+              href="#"
+              target="_blank"
               rel="noopener noreferrer"
             >
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center space-x-2 mx-auto">
                 <Download className="h-5 w-5" />
-                <span>Download Now</span>
+                <span>{title}</span>
               </button>
             </a>
-
+          ))}
         </div>
       </section>
 
+      {/* ✅ Why Choose Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
@@ -79,6 +89,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ✅ CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -91,19 +102,18 @@ export default function Home() {
             <button className="bg-white hover:bg-gray-100 text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
               Download Now
             </button>
-           
 
-<Link
-  to="/contact"
-  className="bg-transparent hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg border-2 border-white transition-all duration-300"
->
-  Contact Us
-</Link>
-
+            <Link
+              to="/contact"
+              className="bg-transparent hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg border-2 border-white transition-all duration-300"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* ✅ Legal Disclaimer */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-yellow-50 border-t-4 border-yellow-400">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-start space-x-4">
@@ -128,3 +138,4 @@ export default function Home() {
     </div>
   );
 }
+

@@ -6,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* ✅ Download Buttons Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto text-center space-y-4">
+        <div className="max-w-7xl mx-auto text-center flex flex-col items-center gap-4">
           {[
             "Download Flying Chess",
             "Download 3 Patti Dragon Tiger Club",
@@ -138,4 +138,3 @@ export default function Home() {
     </div>
   );
 }
-

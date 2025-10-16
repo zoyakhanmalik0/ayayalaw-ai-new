@@ -2,16 +2,16 @@ import { Download, Shield, Zap, Users, Clock } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const titles = [
-    "3 Patti Dragon Tiger Club",
-    "3 Patti Flying Chess",
-    "3 Patti No. 1",
-    "3 Patti Blue",
-    "3 Patti Gold",
-    "3 Patti Crown",
-    "3 Patti Boss",
-    "3 Patti Lucky",
-    "3 Patti Master"
+  const games = [
+    { title: "3 Patti Dragon Tiger Club", link: "https://3pattirs.net/?from_gameid=5915566&channelCode=5625859" },
+    { title: "3 Patti Flying Chess", link: "https://flyingchess.com/?from_gameid=8418021&channelCode=8307610" },
+    { title: "3 Patti No. 1", link: "https://3pattino1.com/?from_gameid=7830308&channelCode=100000" },
+    { title: "3 Patti Blue", link: "https://3pattirs.net/?from_gameid=5915566&channelCode=5625859" },
+    { title: "3 Patti Gold", link: "https://flyingchess.com/?from_gameid=8418021&channelCode=8307610" },
+    { title: "3 Patti Crown", link: "https://3pattino1.com/?from_gameid=7830308&channelCode=100000" },
+    { title: "3 Patti Boss", link: "https://3pattirs.net/?from_gameid=5915566&channelCode=5625859" },
+    { title: "3 Patti Lucky", link: "https://flyingchess.com/?from_gameid=8418021&channelCode=8307610" },
+    { title: "3 Patti Master", link: "https://3pattino1.com/?from_gameid=7830308&channelCode=100000" },
   ];
 
   return (
@@ -19,10 +19,10 @@ export default function Home() {
       {/* ✅ Download Buttons Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center gap-4">
-          {titles.map((title, index) => (
+          {games.map((game, index) => (
             <a
               key={index}
-              href="#"
+              href={game.link}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -30,7 +30,7 @@ export default function Home() {
                 className="w-80 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 flex items-center justify-center space-x-2 mx-auto"
               >
                 <Download className="h-5 w-5 flex-shrink-0" />
-                <span className="truncate">{title}</span>
+                <span className="truncate">{game.title}</span>
               </button>
             </a>
           ))}
@@ -137,4 +137,5 @@ export default function Home() {
     </div>
   );
 }
+
 

@@ -8,12 +8,16 @@ export default function Home() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto text-center flex flex-col items-center gap-4">
           {[
-            "Download Flying Chess",
-            "Download 3 Patti Dragon Tiger Club",
-            "Download 3 Patti No1",
-            "Download 3 Patti Blue",
-            "Download 3 Patti Lucky",
-            "Download 3 Patti Gold"
+          "3 Patti Dragon Tiger Club",
+"3 Patti Flying Chess",
+"3 Patti No. 1",
+"3 Patti Blue",
+"3 Patti Gold",
+"3 Patti Crown",
+"3 Patti Boss",
+"3 Patti Lucky",
+"3 Patti Master"
+
           ].map((title, index) => (
             <a
               key={index}

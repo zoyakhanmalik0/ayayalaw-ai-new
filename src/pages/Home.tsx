@@ -6,14 +6,9 @@ export default function Home() {
     <div className="min-h-screen">
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Ayayalaw-AI
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Your trusted AI legal assistant — fast, reliable, and secure.
-          </p>
+          
           <a 
-              href="https://flyingchess.org?from_gameid=8418021&channelCode=8307610" 
+              href="#" 
               target="_blank" 
               rel="noopener noreferrer"
             >
